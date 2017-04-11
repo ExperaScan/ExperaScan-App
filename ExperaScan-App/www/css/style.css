@@ -1,0 +1,37 @@
+:root {
+	--first-color: rgb(0, 150, 136);
+	--second-color: rgb(255, 193, 7);
+}
+
+.hidden {
+	display: none;
+}
+
+.page-content {
+	padding: 10px;
+}
+
+.page-content > * {
+	max-width: 100%;
+}
+
+/*Progress bars*/
+
+.progressBarContainer {
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	height: 20px;
+	width: 100%;
+}
+
+.progressBarProgress {
+	height: 100%;
+	max-width: 100%;
+	min-width: 0;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+
+}

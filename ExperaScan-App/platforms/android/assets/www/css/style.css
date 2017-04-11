@@ -1,0 +1,129 @@
+:root {
+	--first-color: rgb(0, 150, 136);
+	--second-color: rgb(255, 193, 7);
+}
+
+body {
+	background-color: #001a17;
+}
+
+.hidden {
+	display: none;
+}
+
+.page-content {
+	color: white;
+	padding: 10px;
+}
+
+.page-content > * {
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.page-content > * > *{
+	text-align: left;
+}
+
+.page-content h1, 
+.page-content h2, 
+.page-content h3, 
+.page-content h4, 
+.page-content h5, 
+.page-content h6 {
+	font-family: Friz Quadrata, serif;
+	font-weight: bold;
+	color: var(--second-color);
+	margin-bottom: 10px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+.mdl-layout-title {
+	font-family: Friz Quadrata, serif;
+	font-weight: bold;
+	font-size: 32px;
+}
+
+/*Progress bars*/
+
+.progressBarContainer {
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	height: 20px;
+	width: 100%;
+}
+
+.progressBarProgress {
+	height: 100%;
+	max-width: 100%;
+	min-width: 0;
+	border-radius: 10px;
+}
+
+/*Sub navigation*/
+
+.subNav {
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+	text-align: left;
+	top: 0;
+	left: 0;
+}
+
+.subNavItem {
+	display: inline-block;
+	padding: 15px 10px;
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+}
+
+.subNavItem:active {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*Champion List*/
+
+.championListChampionContainer {
+	display: inline-block;
+	position: relative;
+	border: 2px outset var(--second-color);
+	margin: 5px;
+	width: 120px;
+	overflow: hidden;
+}
+
+.championListChampionContainer span {
+	position: absolute;
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	left: 0;
+	bottom: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.75);
+	box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+}
+
+.championListChampionContainer img {
+	width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+	.championListChampionContainer span {
+		font-size: 10px;
+		padding: 2px;
+	}
+
+	.championListChampionContainer {
+		width: 100px;
+		width: calc(100% / 7);
+		min-width: 80px;
+	}
+}
