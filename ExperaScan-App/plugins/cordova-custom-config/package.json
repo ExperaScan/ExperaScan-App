@@ -1,47 +1,138 @@
 {
-    "version": "3.1.3",
-    "name": "cordova-custom-config",
-    "cordova_name": "cordova-custom-config",
-    "description": "Cordova/Phonegap plugin to update platform configuration files based on preferences and config-file data defined in config.xml.",
-    "author": "Dave Alden",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/dpa99c/cordova-custom-config.git"
-    },
-    "cordova": {
-        "id": "cordova-custom-config",
-        "platforms": [
-            "android",
-            "ios"
-        ]
-    },
-    "issue": "https://github.com/dpa99c/cordova-custom-config/issues",
-    "keywords": [
-        "ecosystem:cordova",
-        "cordova",
-        "cordova-android",
-        "cordova-ios",
-        "phonegap",
-        "config",
-        "configuration",
-        "plist",
-        "manifest"
+  "_args": [
+    [
+      {
+        "raw": "cordova-custom-config",
+        "scope": null,
+        "escapedName": "cordova-custom-config",
+        "name": "cordova-custom-config",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\xampp\\htdocs\\Leerjaar_3\\OP3\\Preasure Cooker\\ExperaScan-App\\ExperaScan-App"
     ],
-    "dependencies": {
-        "lodash": "^4.3.0",
-        "elementtree": "^0.1.6",
-        "plist": "^1.2.0",
-        "xcode": "^0.8.9",
-        "colors": "^1.1.2",
-        "shelljs": "^0.7.0",
-        "tostr": "^0.1.0"
-    },
-    "devDependencies": {
-        "jshint": "^2.6.0",
-        "got": "^6.5.0"
-    },
-    "scripts": {
-        "test": "jshint hooks"
+    [
+      {
+        "raw": "cordova-custom-config",
+        "scope": null,
+        "escapedName": "cordova-custom-config",
+        "name": null,
+        "rawSpec": "cordova-custom-config",
+        "spec": "C:\\xampp\\htdocs\\Leerjaar_3\\OP3\\Preasure Cooker\\ExperaScan-App\\ExperaScan-App\\node_modules\\cordova-custom-config",
+        "type": "directory"
+      },
+      "C:\\xampp\\htdocs\\Leerjaar_3\\OP3\\Preasure Cooker\\ExperaScan-App\\ExperaScan-App\\node_modules"
+    ],
+    [
+      {
+        "raw": "cordova-custom-config",
+        "scope": null,
+        "escapedName": "cordova-custom-config",
+        "name": null,
+        "rawSpec": "cordova-custom-config",
+        "spec": "C:\\xampp\\htdocs\\Leerjaar_3\\OP3\\Preasure Cooker\\ExperaScan-App\\ExperaScan-App\\node_modules\\cordova-custom-config",
+        "type": "directory"
+      },
+      "C:\\xampp\\htdocs\\Leerjaar_3\\OP3\\Preasure Cooker\\ExperaScan-App\\ExperaScan-App\\node_modules"
+    ]
+  ],
+  "_from": "cordova-custom-config@latest",
+  "_id": "cordova-custom-config@3.1.3",
+  "_inCache": true,
+  "_location": "/cordova-custom-config",
+  "_nodeVersion": "7.3.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-custom-config-3.1.3.tgz_1490847331803_0.09977839654311538"
+  },
+  "_npmUser": {
+    "name": "davealden",
+    "email": "dave@workingedge.co.uk"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-custom-config",
+    "scope": null,
+    "escapedName": "cordova-custom-config",
+    "name": null,
+    "rawSpec": "cordova-custom-config",
+    "spec": "C:\\xampp\\htdocs\\Leerjaar_3\\OP3\\Preasure Cooker\\ExperaScan-App\\ExperaScan-App\\node_modules\\cordova-custom-config",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-custom-config/-/cordova-custom-config-3.1.3.tgz",
+  "_shasum": "cdb23368db40913779600f0bfd53d3a3b0bf502f",
+  "_shrinkwrap": null,
+  "_spec": "cordova-custom-config",
+  "_where": "C:\\xampp\\htdocs\\Leerjaar_3\\OP3\\Preasure Cooker\\ExperaScan-App\\ExperaScan-App\\node_modules",
+  "author": {
+    "name": "Dave Alden"
+  },
+  "bugs": {
+    "url": "https://github.com/dpa99c/cordova-custom-config/issues"
+  },
+  "cordova": {
+    "id": "cordova-custom-config",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "cordova_name": "cordova-custom-config",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "elementtree": "^0.1.6",
+    "lodash": "^4.3.0",
+    "plist": "^1.2.0",
+    "shelljs": "^0.7.0",
+    "tostr": "^0.1.0",
+    "xcode": "^0.8.9"
+  },
+  "description": "Cordova/Phonegap plugin to update platform configuration files based on preferences and config-file data defined in config.xml.",
+  "devDependencies": {
+    "got": "^6.5.0",
+    "jshint": "^2.6.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "cdb23368db40913779600f0bfd53d3a3b0bf502f",
+    "tarball": "https://registry.npmjs.org/cordova-custom-config/-/cordova-custom-config-3.1.3.tgz"
+  },
+  "gitHead": "aaa3ca30abd4fed690b4718240ef60a822eae085",
+  "homepage": "https://github.com/dpa99c/cordova-custom-config#readme",
+  "issue": "https://github.com/dpa99c/cordova-custom-config/issues",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova",
+    "cordova-android",
+    "cordova-ios",
+    "phonegap",
+    "config",
+    "configuration",
+    "plist",
+    "manifest"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "davealden",
+      "email": "dave@workingedge.co.uk"
     }
+  ],
+  "name": "cordova-custom-config",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dpa99c/cordova-custom-config.git"
+  },
+  "scripts": {
+    "test": "jshint hooks"
+  },
+  "version": "3.1.3"
 }

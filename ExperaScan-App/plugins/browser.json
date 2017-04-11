@@ -10,13 +10,16 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.mentozer.experascan"
         },
-        "cordova-custom-config": {
-            "PACKAGE_NAME": "com.mentozer.experascan"
-        },
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.mentozer.experascan"
         },
         "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "com.mentozer.experascan"
+        },
+        "cordova-custom-config": {
+            "PACKAGE_NAME": "com.mentozer.experascan"
+        },
+        "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.mentozer.experascan"
         }
     },

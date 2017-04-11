@@ -1,13 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.mentozer.experascan" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.mentozer.experascan" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
+    <feature name="BarcodeScanner">
+        <param name="browser-package" value="BarcodeScanner" />
+    </feature>
     <name>ExperaScan</name>
+    <icon src="www/favicon.png" />
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Met de ExperaScan app zal u nooit producten in huis hebben die over datum zijn.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
+    <author email="mentosmenno@hotmail.com" href="http://mennovandenende.nl">
         Apache Cordova Team
     </author>
     <content src="index.html" />
