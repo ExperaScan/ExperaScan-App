@@ -25,20 +25,7 @@ function readBarcode() {
 }
 
 function getProducts(id) {
-	var productsCallResult = null;
-	$.ajax({
-		type: 'GET',
-		data: {},
-		url: API.baseUrl + "getOrder/" + id,
-		dataType: 'json',
-		async: false,
-		success: function(jsonData){
-			productsCallResult = jsonData;
-		},
-		error: function(jqxhr,textStatus,errorThrown) {
-			productsCallResult = false;
-		}
-	});
+	var productsCallResult = API.getOrder({id: id});
 	processProductsResult(productsCallResult);
 }
 

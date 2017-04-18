@@ -25,44 +25,30 @@ function readBarcode() {
 }
 
 function getProducts(id) {
-	var productsCallResult = null;
-	$.ajax({
-		type: 'GET',
-		data: {},
-		url: API.baseUrl + "getOrder/" + id,
-		dataType: 'json',
-		async: false,
-		success: function(jsonData){
-			console.log(jsonData);
-			productsCallResult = jsonData.products;
-			console.log(productsCallResult);
-		},
-		error: function(jqxhr,textStatus,errorThrown) {
-			console.log(jqxhr);
-			console.log(textStatus);
-			console.log(errorThrown);
-			productsCallResult = false;
-		}
-	});
+	var productsCallResult = API.getOrder({id: id});
 	processProductsResult(productsCallResult);
 }
 
-function processProductsResult(products) {
-	if(products) {
+function processProductsResult(json) {
+	if(json) {
+		var products = json.products;
 		var currentProducts = JSON.parse(app.storage.getItem(STORAGE_PRODUCTS));
 		$.each(products, function(index, product) {
 			currentProducts.push(product);
 		});
-		app.storage.setItem(STORAGE_PRODUCTS, JSON.stringify(currentProducts));
+		app.storage.setItem(STORAGE_PRODUCTS, JSON.stringify(currentProducts));4
+		navigator.notification.alert(
+			'Alle producten van ' + json.store.name + ' zijn toegevoegd.',  // message
+			goToProductList,         // callback
+			'Producten toegevoegd',            // title
+			'Oké'                  // buttonName
+		);
 	} else {
-		//scanFailed();
+		scanFailed();
 	}
 }
 
 var barcodeResult = readBarcode();
-if(barcodeResult != null) {
-	getProducts(barcodeResult);
-}
 
 function scanFailed() {
 	navigator.notification.alert(
