@@ -3,8 +3,8 @@ function readBarcode() {
 	cordova.plugins.barcodeScanner.scan(
 		function (result) {
 			if($.trim(result.text) != "") {
-				scannedQR = result.text;
-				getProducts(scannedQR);
+				scannedBarcode = result.text;
+				deleteProduct(scannedBarcode);
 			} else if (result.cancelled == "true") {
 				goToProductList();
 			} else {
@@ -24,25 +24,30 @@ function readBarcode() {
 	return scannedBarcode;
 }
 
-function getProducts(id) {
-	var productsCallResult = API.getOrder({id: id});
-	processProductsResult(productsCallResult);
-}
+function deleteProduct(barcode) {
+	var productsList = JSON.parse(app.storage.getItem(STORAGE_PRODUCTS));
 
-function processProductsResult(json) {
-	if(json) {
-		var products = json.products;
-		var currentProducts = JSON.parse(app.storage.getItem(STORAGE_PRODUCTS));
-		$.each(products, function(index, product) {
-			currentProducts.push(product);
-		});
-		app.storage.setItem(STORAGE_PRODUCTS, JSON.stringify(currentProducts));4
-		navigator.notification.alert(
-			'Alle producten van ' + json.store.name + ' zijn toegevoegd.',  // message
-			goToProductList,         // callback
-			'Producten toegevoegd',            // title
-			'Oké'                  // buttonName
-		);
+	var pattern = new RegExp("[0-9]+-[0-9]+");
+	if (pattern.test(barcode)) {
+		var codeArr = barcode.split("-");
+		var productCode = codeArr[0];
+		var productDate = codeArr[1];
+		var year = productDate.substring(0, 4);
+		var month = productDate.substring(4, 6);
+		var day = productDate.substring(6, 8);
+		var dateToRemove = year + "-" + month + "-" + day;
+		// var productsList = reusableFunctions.getObjectsOfArrayByParameter(productsList, productCode, "code");
+		// var product = reusableFunctions.getObjectOfArrayByParameter(productsList, dateToRemove, "date");
+
+		for(var i=0; i < productsList.length; i++) {
+			if(productsList[i].code == productCode && productsList[i].date == dateToRemove) {
+				productsList.splice(i, 1);
+				app.storage.setItem(STORAGE_PRODUCTS, JSON.stringify(productsList));
+				return;
+			}
+		}
+
+		alert(JSON.stringify(product));
 	} else {
 		scanFailed();
 	}

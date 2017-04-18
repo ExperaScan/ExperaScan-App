@@ -36,7 +36,7 @@ function processProductsResult(json) {
 		$.each(products, function(index, product) {
 			currentProducts.push(product);
 		});
-		app.storage.setItem(STORAGE_PRODUCTS, JSON.stringify(currentProducts));4
+		app.storage.setItem(STORAGE_PRODUCTS, JSON.stringify(currentProducts));
 		navigator.notification.alert(
 			'Alle producten van ' + json.store.name + ' zijn toegevoegd.',  // message
 			goToProductList,         // callback
