@@ -43,11 +43,10 @@ function deleteProduct(barcode) {
 			if(productsList[i].code == productCode && productsList[i].date == dateToRemove) {
 				productsList.splice(i, 1);
 				app.storage.setItem(STORAGE_PRODUCTS, JSON.stringify(productsList));
+				goToProductList();
 				return;
 			}
 		}
-
-		alert(JSON.stringify(product));
 	} else {
 		scanFailed();
 	}
