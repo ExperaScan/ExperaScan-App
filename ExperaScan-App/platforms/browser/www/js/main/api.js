@@ -12,10 +12,10 @@ var API = {
 		return result;
 	},
 
-	getFromAPI: function(endPoint, method = "GET", data = {}) {
+	getFromAPI: function(endPoint, data = {}) {
 		var result = null;
 		$.ajax({
-			type: method,
+			type: 'GET',
 			data: data,
 			url: this.baseUrl + endPoint,
 			dataType: 'json',

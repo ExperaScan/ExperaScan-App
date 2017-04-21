@@ -15,6 +15,16 @@
 	max-width: 100%;
 }
 
+/*TextColors*/
+
+.red {
+	color: red;
+}
+
+.orange {
+	color: orange;
+}
+
 /*Progress bars*/
 
 .progressBarContainer {

@@ -22,10 +22,12 @@ var app = {
 			page = 'home';
 		}
 		loadPage(page);
+
+		document.addEventListener("backbutton", this.close, false);
 	},
 
 	close: function() {
-
+		navigator.app.exitApp();
 	}
 };
 

@@ -1,6 +1,7 @@
 var app = {
 	// Global variables
 	storage: window.localStorage,
+	backgroundTimer: null,
 
 	// Startup functions
 	initialize: function() {
@@ -22,10 +23,12 @@ var app = {
 			page = 'home';
 		}
 		loadPage(page);
+
+		document.addEventListener("backbutton", this.close, false);
 	},
 
 	close: function() {
-
+		navigator.app.exitApp();
 	}
 };
 

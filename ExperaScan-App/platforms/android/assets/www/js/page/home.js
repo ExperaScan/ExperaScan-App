@@ -15,14 +15,12 @@ $.each(productsList, function(productIndex, product) {
 	var daysDiff = reusableFunctions.date.daysDifference(product.date);
 
 	var dateClass = "";
-	if (daysDiff <= 0) {
+	if (reusableFunctions.date.expired(product.date)) {
 		dateClass = "red";
 		expiredProducts = true;
 		expiredProductsList.push(product);
 	} else if (daysDiff <= ALMOST_EXPIRATION_DAYS) {
 		dateClass = "orange";
-		expiredProducts = true;
-		expiredProductsList.push(product);
 	}
 
 	domToAppend += "<div class='product'><div class='productName'>" + product.name + "</div><div class='productDate " + dateClass + "'>" + reusableFunctions.date.formatLocal(product.date) + "</div></div><hr>";

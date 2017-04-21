@@ -15,7 +15,7 @@ $.each(productsList, function(productIndex, product) {
 	var daysDiff = reusableFunctions.date.daysDifference(product.date);
 
 	var dateClass = "";
-	if (daysDiff <= 0) {
+	if (reusableFunctions.date.expired(product.date)) {
 		dateClass = "red";
 		expiredProducts = true;
 		expiredProductsList.push(product);

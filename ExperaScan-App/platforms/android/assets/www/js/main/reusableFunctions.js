@@ -22,6 +22,19 @@ var reusableFunctions = {
 			var timeDiff = Math.abs(date2.getTime() - date1.getTime());
 			var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 			return diffDays;
+		}, 
+		expired: function(d1, d2 = null) {
+			var d1s = d1.split("-");
+			var date1 = new Date(d1s[0], d1s[1] - 1, d1s[2]);
+
+			if (d2 != null) {
+				var d2s = d2.split("-");
+				var date2 = new Date(d2s[0], d2s[1] - 1, d2s[2]);
+			} else {
+				var date2 = new Date();
+			}
+			
+			return (date1 < date2);
 		}
 	},
 
