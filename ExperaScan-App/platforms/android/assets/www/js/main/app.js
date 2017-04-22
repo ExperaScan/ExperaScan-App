@@ -1,7 +1,6 @@
 var app = {
 	// Global variables
 	storage: window.localStorage,
-	backgroundTimer: null,
 
 	// Startup functions
 	initialize: function() {
